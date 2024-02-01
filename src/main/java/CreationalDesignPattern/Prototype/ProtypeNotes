@@ -1,0 +1,27 @@
+Prototype is creational design pattern that lets you copy existing
+objects without making your code dependent on their classes.
+
+for example:
+the classmate notebook has same ruled page oof say 120 pages,only differnce
+ was their of the funfacts at the end of the notebook,so instead of creating 1000s of notebook
+ we can create one notebook and then clone it.and after cloning at those funfacts at the
+ end of the notebook/
+
+ Similarly we can clone the objects of the class and then use it.
+
+ steps to create prototype:
+  lets consider scaler student as example
+  so, In scaler student joining may have differnet batch, student name,
+    student id,student email,student phone number,student address,student college name
+    but for one batch it may have same instructor name, same course name, same course id,
+    same course duration, same course fee, same course start date, same course end date.
+  so in this case create s atudent class and then create a prototype of it and then clone it.
+
+  Here one issue is their we may need resgister to maintain various types of prototype
+  for that we can use registry design pattern.
+
+  So registry design pattern will have  a map which will have key as string and value as
+  object or prototype
+
+  and two function one will register the prototype and other will return the clone of the
+    prototype.

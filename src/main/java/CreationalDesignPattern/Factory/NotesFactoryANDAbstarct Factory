@@ -1,0 +1,27 @@
+In this factory design pattern example,we have a interface Button,Menu,DropDown which
+is implemented by differnt classes like AndroidButton,AndroidMenu,AndroidDropDown and
+IOSButton,IOSMenu,IOSDropDown, similarly if in future any other device is supported
+then we can create a new class like Windows and implement the interface and add the logic.
+
+Here Flutter is the start point where flutter is the class which have all the non factory method and
+factory method which will return the object of the class based on the device type.
+
+So here comes the concept of factory and abstract factory.
+Method which create object of the class is called factory method.
+so, if in a class or interface we have method which have both factory and non factory it is simple factory.
+and when we separate the non factory method and factory method in different class then it is called abstract factory.
+
+
+for example to remember:
+if we have user class and user wants to connect to database. and  we have different database 
+like mysql,oracle,sqlserver then we can create a factory class which will return the object 
+of the class based on the database type.
+so here also in databse interface we may have method which creates object and some method 
+which perform operations. so that is simple factory.
+and if we separate the method which creates object and method which perform operation in different class
+then it is called abstract factory.
+
+here also we have query beacause mysql and nosql have different query so we have created a query interface
+and implemented by different classes.
+but user shouldn't have idea how databbse is getting query so we have created a factory class which will
+do the job using database interface.
