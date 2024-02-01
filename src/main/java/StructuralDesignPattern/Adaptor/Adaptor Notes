@@ -1,0 +1,28 @@
+Adaptor is a Structural Design Pattern.
+    * It is used to convert the interface of one class into another interface that the client expects.
+    * It lets classes work together that couldn't otherwise because of incompatible interfaces.
+    *
+    * The Adapter Pattern is also known as Wrapper.
+    *
+    * The Adapter Pattern is implemented by two types of adapter:
+    * 1. Class Adapter
+    * 2. Object Adapter
+    *
+    * The Adapter Pattern is implemented by three components:
+    * 1. Target
+    * 2. Adapter
+    * 3. Adaptee
+    *
+    * Example of Adapter Pattern:
+    lets say we are using PhonePe to make payment.
+    Phone Pe uses third party bank APIs to make payment.
+    say, I have Yes Bank API and I want to use it with PhonePe.
+    so if I directly use with my PhonePe application. It will have few considerable issues.
+    1 it is tightly coupled with PhonePe application.
+    2. if I want to use another bank API, I have to change my PhonePe application or make
+    changes in the code which violates OCP(open-closed principle) of SOLID.
+    therfore, we need an adapter which will convert Yes Bank API to PhonePe API.
+    so that PhonePe application can use Yes Bank API or any other Bank API if required
+    without making any changes in the PhonePe application.
+
+    */
