@@ -1,0 +1,29 @@
+the Observer Pattern is useful in any situation where multiple objects need to be kept
+ in sync with one another, without tightly coupling them together
+ It work in publish/subscribe model
+ */
+ Fo example in A ecommerce application if one orders a product then the order should be
+ notified to the inventory and the shipping department and as well as to the user who ordered it.
+ so in this case we can use the observer pattern to notify the inventory and the shipping department and user.
+
+ */
+
+ Im[lementation notes
+ Amazon - publisher -> contains list of subscriber objects
+
+ 10 subscribers -> 10 objects
+ Amazon -> 3 objects
+
+ 1 object -> 3 subscribers in the list
+ 2 object -> 4 subscribers in the list
+ 3 object -> 3 subscribers in the list
+
+ Amazon{ list}
+
+ a1obj -> list
+ a2obj -> list
+ a3obj -> list
+
+
+ register
+ deregister
