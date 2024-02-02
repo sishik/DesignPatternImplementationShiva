@@ -1,0 +1,3 @@
+On production level whatever Annotations we are using is Decorator design pattern.
+for example a class is their and we use getter and setter annotations that is Decorator design pattern.
+ */

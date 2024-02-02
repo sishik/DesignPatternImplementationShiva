@@ -17,4 +17,22 @@ outer class and use return this to return the same setted values to outer class.
 5. The final step is to provide a build() method in the builder class that will return the Object needed by client program.
 For this we need to have a private constructor in the Class with Builder class as argument.
 */
+In builder design pattern is required when we have need of validation without creating the object.
+also when we have large number of parameters in constructor then we can use builder design pattern.
+Builder design pattern is used to create immutable objects.
+Builder design pattern is used to create object step by step and return the final object.
+Builder design pattern is used to create object with different properties.
+So, steps are as follows:
+1. Create a static nested class and copy all the arguments from the outer class to the Builder class.
+2. We should follow the naming convention and if the class name is Computer then builder class should
+be named as ComputerBuilder.
+3. Builder class should have a public constructor with all the required attributes as parameters.
+4. Builder class should have methods to set the optional parameters and it should
+return the same Builder.(explanation:in inner class we only use setter method to set the value of outer
+class and use return this to return the same setted values to outer class) as we know that we can not
+access the private members of outer class in inner class so we use setter method to set the value of
+outer class and use return this to return the same setted values to outer class.
 
+5. The final step is to provide a build() method in the builder class that will return the Object needed by client program.
+For this we need to have a private constructor in the Class with Builder class as argument.
+*/

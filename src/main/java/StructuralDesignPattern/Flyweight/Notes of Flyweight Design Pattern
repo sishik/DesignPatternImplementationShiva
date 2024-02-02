@@ -1,0 +1,8 @@
+The Flyweight design pattern is a structural design pattern that aims to minimize the memory
+ usage and improve performance by sharing as much data as possible with similar objects.
+ In this pattern, objects are divided into intrinsic and extrinsic states. Intrinsic state is the part of the
+ object that can be shared with other objects, while extrinsic state is the part that is unique to the
+ object. The idea is to create a factory that will maintain a pool of shared objects and only create
+ new objects when necessary. This pattern is useful when the program needs to create a large
+    number of similar objects.
+    */
