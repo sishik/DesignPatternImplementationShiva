@@ -1,0 +1,151 @@
+The Facade pattern is helpful when a system is complex and difficult to understand.
+It provides a simple interface to the client, which hides the complexities of the system.
+The client does not need to know about the underlying classes and interfaces used by the system.
+ Example1:
+ For example, imagine you are building a music player application that can play music from
+ different sources such as a CD, MP3 player, and streaming services. Each source has its own set
+ of classes and interfaces, and the client code would need to interact with each of them differently.
+ By using the Facade Design Pattern, you could create a new MusicPlayerFacade class that acts
+ as a simplified interface to the different music sources, shielding the client from the complexity of
+ interacting with each source separately.
+
+ // Complex subsystem interface
+
+ interface MusicSource {
+ void play();
+ void pause();
+ void stop();
+ }
+
+ // Concrete subsystems
+ class CdPlayer implements MusicSource {
+ public void play() {
+ System.out.println("Playing CD...");
+ }
+ public void pause() {
+ System.out.println("Pausing CD...");
+ }
+ public void stop() {
+ System.out.println("Stopping CD...");
+ }
+ }
+
+class Mp3Player implements MusicSource {
+ public void play() {
+ System.out.println("Playing MP3...");
+ }
+ public void pause() {
+ System.out.println("Pausing MP3...");
+ }
+ public void stop() {
+ System.out.println("Stopping MP3...");
+ }
+ }
+
+ class StreamingService implements MusicSource {
+ public void play() {
+ System.out.println("Playing streaming music...");
+ }
+ public void pause() {
+ System.out.println("Pausing streaming music...");
+ }
+ public void stop() {
+ System.out.println("Stopping streaming music...");
+ }
+ }
+
+ // Facade class
+ class MusicPlayerFacade {
+ private MusicSource cdPlayer;
+ private MusicSource mp3Player;
+ private MusicSource streamingService;
+ public MusicPlayerFacade() {
+ this.cdPlayer = new CdPlayer();
+ this.mp3Player = new Mp3Player();
+ this.streamingService = new StreamingService();
+ }
+ public void playCd() {
+ cdPlayer.play();
+ }
+public void pauseCd() {
+ cdPlayer.pause();
+ }
+ public void stopCd() {
+ cdPlayer.stop();
+ }
+ public void playMp3() {
+ mp3Player.play();
+ }
+ public void pauseMp3() {
+ mp3Player.pause();
+ }
+ public void stopMp3() {
+ mp3Player.stop();
+ }
+ public void playStreamingMusic() {
+ streamingService.play();
+ }
+ public void pauseStreamingMusic() {
+ streamingService.pause();
+ }
+ public void stopStreamingMusic() {
+ streamingService.stop();
+ }
+ }
+
+
+ // Client code
+ public class Client {
+ public static void main(String[] args) {
+ MusicPlayerFacade musicPlayer = new MusicPlayerFacade();
+ // Play CD
+ musicPlayer.playCd();
+ // Play MP3
+ musicPlayer.playMp3();
+ // Play streaming music
+}
+ }
+
+
+
+
+ musicPlayer.playStreamingMusic();
+ Example2:
+ public class Computer {
+ private CPU cpu;
+ private Memory memory;
+ private HardDrive hardDrive;
+ public Computer() {
+ this.cpu = new CPU();
+ this.memory = new Memory();
+ this.hardDrive = new HardDrive();
+ }
+ public void startComputer() {
+ cpu.freeze();
+ memory.load(0, hardDrive.read(0, 100));
+ cpu.jump(0);
+ cpu.execute();
+ }
+ }
+
+ public class CPU {
+ public void freeze() { /* ... */ }
+ public void jump(long position) { /* ... */ }
+ public void execute() { /* ... */ }
+ }
+
+ public class Memory {
+ public void load(long position, byte[] data) { /* ... */ }
+ }
+
+ public class HardDrive {
+ public byte[] read(long lba, int size) { /* ... */ }
+ }
+
+ In this example, the Computer class is a facade that provides a simple interface to the client. It
+ hides the complexity of the CPU, Memory, and HardDrive subsystems, and provides a single
+ startComputer method that the client can use to start the computer. The CPU, Memory, and
+ HardDrive classes are the underlying subsystems that are used by the Computer class to start the
+ computer.
+Using the Facade pattern in this example makes it easy for the client to start the computer without
+ having to understand the complexities of the CPU, Memory, and HardDrive subsystems

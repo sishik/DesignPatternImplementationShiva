@@ -7,6 +7,16 @@ the Observer Pattern is useful in any situation where multiple objects need to b
  so in this case we can use the observer pattern to notify the inventory and the shipping department and user.
 
  */
+ why we made Amazon(publisher) as Singleton.
+ Single Source of Events: Ensuring that there is only one instance of the publisher helps
+ maintain a single source of events. If there were multiple instances of the publisher,
+ observers might need to register with each instance separately, leading to potential
+ confusion and a lack of consistency in the system.
+
+
+
+
+
 
  Im[lementation notes
  Amazon - publisher -> contains list of subscriber objects

@@ -2,23 +2,26 @@ The Strategy Pattern is a behavioral design pattern that defines a family of alg
  encapsulates each one, and makes them interchangeable. This allows you to select an algorithm
  at runtime, based on the situation
 
- Usecase:
- we use google map and search for sorce and destination
- if we choose various modes of transportation then each means have differnent path and time.
+ Use case:
+ we use google map and search for source and destination
+ if we choose various modes of transportation then each means have different path and time.
  therefore, Here in example we have taken Map class then we are trying to calculate path
  from car bike and walking.
- so, we created a inerface path calculator for calculating path bu car, bike or walkin.
- So Path calculator is implemented by CarPathCalculatorStrategy, BikePathCalculatorStrategy and WalkingPathCalculatorStrategy
-    and we are using these strategies in Map class to calculate path.
+ so, we created a interface path calculator for calculating path by car, bike or walking.
+ So Path calculator is implemented by CarPathCalculatorStrategy, BikePathCalculatorStrategy
+ and WalkingPathCalculatorStrategy
+ and we are using these strategies in Map class to calculate path.
 
- Here also we have implmented a factory design pattern i.e. PathCalculatorFactory to create object of PathCalculatorStrategy
-    based on the mode of transportation.
-
+ Here also we have implmented a factory design pattern i.e. PathCalculatorFactory to create
+ object of PathCalculatorStrategy
+ based on the mode of transportation.
  and we used Singleton pattern to create a single instance of PathCalculatorFactory.
 
- where singleton is used in BikePathCalculatorStartegy, CarPathCalculatorStrategy and WalkingPathCalculatorStrategy
-    to create a single instance of these classes.
+ where singleton is used in BikePathCalculatorStartegy, CarPathCalculatorStrategy and
+ WalkingPathCalculatorStrategy
+ to create a single instance of these classes.
 
- we created singleton because it has only method to calculate path and we dont want to create multiple instance of these classes.
+ we created singleton because it has only method to calculate path and we dont want to create
+ multiple instance of these classes.
 
  */
